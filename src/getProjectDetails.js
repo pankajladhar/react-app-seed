@@ -26,6 +26,12 @@ let getProjectDetails = function (callback) {
             message: 'Enter Build Folder Name:',
             default:'build',
         },
+        {
+            name: 'styleExt',
+            type: 'list',
+            message: 'Style Preference ?',
+            choices: ["CSS", "SCSS", "LESS",]
+        }
         
     ];
 

@@ -1,11 +1,8 @@
 {
   "name": "react-app-seed",
   "version": "1.0.0",
-  "description": "This is",
+  "description": "Boilerplate and tooling for JavaScript application development with React",
   "main": "./index.js",
-  "scripts": {
-    "test": "test"
-  },
   "bin": {
     "react-app-seed": "./index.js"
   },
@@ -14,7 +11,12 @@
     "url": "git+https://github.com/pankajladhar/react-app-seed.git"
   },
   "keywords": [
-    "react"
+    "react",
+    "react-boilerplate",
+    "react-seed",
+    "react-app",
+    "react-setup",
+    "react-skeleton"
   ],
   "author": "Pankaj Ladhar <ladharpankaj@gmail.com>",
   "license": "MIT",

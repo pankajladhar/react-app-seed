@@ -17,9 +17,9 @@ commander
     .parse(process.argv);
 
     getProjectDetails()
-        .then((arguments) => {
-            createProject(arguments)
-        }).catch((err) => {
+        .then((arguments) => { return createProject(arguments)})
+        .then(() => { console.log(chalk.yellow(figlet.textSync("done", { horizontalLayout: 'full' })))})
+        .catch((err) => {
             console.log(chalk.red(err))
         });
 

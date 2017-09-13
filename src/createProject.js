@@ -18,24 +18,17 @@ let createProject = (args)=>{
 
     let currentDir = process.cwd();
     let projectDir = path.join(currentDir, args.appName);
-    let srcDir = path.join(projectDir, args.srcFolderName);
+    let srcDir = args.srcFolderName;
+    let styleExt = args.styleExt.toLowerCase();
     let buildDir = path.join(projectDir, args.buildFolderName);
     let templateDir = path.join(__dirname, 'Templates');
 
-    console.log(srcDir, "sdds")
-    
-    let files = getProjectData(args.srcFolderName);
+    let files = getProjectData(args.srcFolderName, styleExt);
     
 
     fs.ensureDir(projectDir)
-    .then(()=>{
-        return createFiles(files, templateDir, projectDir)
-    }).then((data)=>{
-        console.log(data)
-    })
-    .catch(err => {
-        console.error(err)
-    })
+    fs.ensureDir(buildDir)
+    .then(()=>{ return createFiles(files, templateDir, projectDir) })
     
 }
 

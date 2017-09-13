@@ -1,12 +1,12 @@
 let path = require('path');
-let getProjectData = (srcDir) => {
+let getProjectData = (srcDir, styleExt) => {
     return [
         {
             fileName: srcDir + "/static/index.html",
             template: "",
         },
         {
-            fileName: srcDir + "/static/index.scss",
+            fileName: srcDir + "/static/index."+styleExt,
             template: "",
         },
         {
@@ -66,7 +66,7 @@ let getProjectData = (srcDir) => {
             template: "",
         },
         {
-            fileName: srcDir + "/Components/App/Styles/App.scss",
+            fileName: srcDir + "/Components/App/Styles/App."+styleExt,
             template: "",
         },
     ]
