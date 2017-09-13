@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './styles/COMPONENT_NAME.STYLE_EXT';
 
-class BComponent extends PureComponent {
+class COMPONENT_NAME extends Component {
     render() {
         return (
             <div>
@@ -11,14 +12,14 @@ class BComponent extends PureComponent {
     }
 };
 
-App.propTypes = {
-    title: 
+COMPONENT_NAME.propTypes = {
+    title: "COMPONENT_NAME Component" 
 };
 
-App.defaultProps = {
+COMPONENT_NAME.defaultProps = {
 
 };
 
-App.displayName = "App"
+COMPONENT_NAME.displayName = "COMPONENT_NAME"
 
-export default App;
+export default COMPONENT_NAME;

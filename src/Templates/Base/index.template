@@ -1,0 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.STYLE_EXT';
+import COMPONENT_NAME from './components/COMPONENT_NAME';
+
+
+ReactDOM.render(<COMPONENT_NAME />, document.getElementById('root'));

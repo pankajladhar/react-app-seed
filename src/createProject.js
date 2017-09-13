@@ -4,10 +4,24 @@ let path = require('path');
 let getProjectData = require('./getProjectData');
 
 
-let createFiles = function(files, templateDir, projectDir) {
+let writeInFiles = function (file, templateDir, projectDir, ciArgs){
+    let templateFileContent = fs.readFileSync(
+        path.join(templateDir, file.template), { encoding: "UTF-8" }
+    );
+
+    let template = templateFileContent
+            .replace(/COMPONENT_NAME/g,'App')
+            .replace('PROJECT_NAME',ciArgs.appName)
+            .replace('STYLE_EXT',ciArgs.styleExt.toLowerCase())
+    
+    fs.writeFileSync(path.join(projectDir, file.fileName), template, { encoding: "UTF-8" });
+}
+
+let createFiles = function(files, templateDir, projectDir, ciArgs) {
     return Promise.all(
         files.map((file)=>{
             return fs.ensureFile(path.join(projectDir, file.fileName)).then(()=>{
+                writeInFiles(file, templateDir, projectDir, ciArgs);
                 return file;
             })
         })
@@ -28,7 +42,7 @@ let createProject = (args)=>{
 
     fs.ensureDir(projectDir)
     fs.ensureDir(buildDir)
-    .then(()=>{ return createFiles(files, templateDir, projectDir) })
+    .then(()=>{ return createFiles(files, templateDir, projectDir, args) })
     
 }
 
