@@ -1,0 +1,24 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class BComponent extends PureComponent {
+    render() {
+        return (
+            <div>
+                {this.props.title}
+            </div>
+        );
+    }
+};
+
+App.propTypes = {
+    title: 
+};
+
+App.defaultProps = {
+
+};
+
+App.displayName = "App"
+
+export default App;

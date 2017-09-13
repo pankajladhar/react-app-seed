@@ -1,0 +1,35 @@
+{
+  "name": "react-app-seed",
+  "version": "1.0.0",
+  "description": "This is",
+  "main": "./index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "bin": {
+    "react-app-seed": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankajladhar/react-app-seed.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Pankaj Ladhar <ladharpankaj@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pankajladhar/react-app-seed/issues"
+  },
+  "homepage": "https://github.com/pankajladhar/react-app-seed#readme",
+  "devDependencies": {
+    "chalk": "^2.1.0",
+    "clui": "^0.3.6",
+    "commander": "^2.11.0",
+    "figlet": "^1.2.0",
+    "fs-extra": "^4.0.1",
+    "inquirer": "^3.2.3",
+    "semver": "^5.4.1",
+    "treeify": "^1.0.1"
+  }
+}
