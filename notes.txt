@@ -1,1 +1,3 @@
 COMPONENT_NAME === component name
+STYLE_EXT == user perference about style
+PROJECT_NAME === Application Name
