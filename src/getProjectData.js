@@ -1,6 +1,7 @@
 let path = require('path');
+let getComponentData = require('./getComponentData');
 let getProjectData = (srcDir, styleExt) => {
-    return [
+    let baseProjectData =  [
         {
             fileName: srcDir + "/static/index.html",
             template: "Base/Html.template",
@@ -12,18 +13,6 @@ let getProjectData = (srcDir, styleExt) => {
         {
             fileName: srcDir + "/index.js",
             template: "Base/index.template",
-        },
-         {
-            fileName: srcDir + "/Components/App/index.js",
-            template: "Components/index.template",
-        },
-        {
-            fileName: srcDir + "/Components/App/__tests__/AppSpec.js",
-            template: "Components/Spec.template",
-        },
-        {
-            fileName: srcDir + "/Components/App/Styles/App."+styleExt,
-            template: "Components/Style.template",
         },
         {
             fileName: "./README.md",
@@ -69,7 +58,8 @@ let getProjectData = (srcDir, styleExt) => {
             fileName: "./webpack.config.js",
             template: "Base/Webpack.template",
         },
-    ]
+    ];
+    return baseProjectData.concat(getComponentData(srcDir, "App", styleExt))
 } 
 
 module.exports = getProjectData;
