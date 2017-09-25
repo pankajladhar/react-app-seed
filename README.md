@@ -14,5 +14,5 @@ $ yarn install react-app-seed
 ```
 # CLI
 ```shell 
-$ react-front-cli 
+$ react-app-seed 
 ``` 
