@@ -19,10 +19,6 @@ let getProjectData = (srcDir, styleExt) => {
             template: "Base/README.template",
         },
         {
-            fileName: "./.gitignore",
-            template: "Base/.gitignore.template",
-        },
-        {
             fileName: "./package.json",
             template: "Base/package.template",
         },
@@ -35,28 +31,32 @@ let getProjectData = (srcDir, styleExt) => {
             template: "Base/License.template",
         },
         {
+            fileName: "./webpack.config.js",
+            template: "Base/Webpack.template",
+        },
+        {
+            fileName: "./.gitignore",
+            template: "dotfiles/.gitignore.template",
+        },
+        {
             fileName: "./.eslintrc",
-            template: "Base/.Eslintrc.template",
+            template: "dotfiles/.Eslintrc.template",
         },
         {
             fileName: "./.eslintignore",
-            template: "Base/.Eslintignore.template",
+            template: "dotfiles/.Eslintignore.template",
         },
         {
             fileName: "./.babelrc",
-            template: "Base/.Babelrc.template",
+            template: "dotfiles/.Babelrc.template",
         },
         {
             fileName: "./.editorconfig",
-            template: "Base/.Editorconfig.template",
+            template: "dotfiles/.Editorconfig.template",
         },
         {
             fileName: "./.stylelintrc.json",
-            template: "Base/.Stylelintrc.template",
-        },
-        {
-            fileName: "./webpack.config.js",
-            template: "Base/Webpack.template",
+            template: "dotfiles/.Stylelintrc.template",
         },
     ];
     return baseProjectData.concat(getComponentData(srcDir, "App", styleExt))

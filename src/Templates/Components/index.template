@@ -13,11 +13,11 @@ class COMPONENT_NAME extends Component {
 };
 
 COMPONENT_NAME.propTypes = {
-    title: "COMPONENT_NAME Component" 
+    title: PropTypes.string
 };
 
 COMPONENT_NAME.defaultProps = {
-
+    title: "COMPONENT_NAME Component" 
 };
 
 COMPONENT_NAME.displayName = "COMPONENT_NAME"
